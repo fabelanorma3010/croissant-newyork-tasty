@@ -8,6 +8,7 @@ p {
 }
 
 .croissant-photo {
+  width: 400px;
   max-width: 100%;
   border-radius: 10px;
   display: block;
@@ -21,4 +22,88 @@ footer {
 footer a {
   margin: 0 10px;
   color: green;
+}
+
+.recipe-intro {
+  margin: 0 auto 24px;
+  max-width: 620px;
+}
+
+.recipe-book {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 18px;
+  background: #684728;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px #56381955;
+}
+
+.book-page {
+  min-width: 0;
+  padding: 28px;
+  background: #fff8e9;
+  color: #382817;
+}
+
+.book-page:first-child {
+  border-radius: 8px 0 0 8px;
+  box-shadow: inset -10px 0 14px -14px #4c321e;
+}
+
+.book-page:last-child {
+  border-radius: 0 8px 8px 0;
+  box-shadow: inset 10px 0 14px -14px #4c321e;
+}
+
+.recipe {
+  padding: 8px 0 22px;
+  border-bottom: 1px solid #d9c8a9;
+}
+
+.recipe:last-child {
+  border-bottom: 0;
+}
+
+.recipe h2 {
+  margin: 0 0 8px;
+  color: #75421e;
+}
+
+.recipe h3 {
+  margin: 14px 0 6px;
+}
+
+.recipe p,
+.recipe ul,
+.recipe ol {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.recipe ul,
+.recipe ol {
+  padding-left: 22px;
+}
+
+@media (max-width: 640px) {
+  .recipe-book {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .book-page {
+    padding: 20px;
+  }
+
+  .book-page:first-child {
+    border-radius: 8px 8px 0 0;
+    box-shadow: inset 0 -10px 14px -14px #4c321e;
+  }
+
+  .book-page:last-child {
+    border-radius: 0 0 8px 8px;
+    box-shadow: inset 0 10px 14px -14px #4c321e;
+  }
 }
